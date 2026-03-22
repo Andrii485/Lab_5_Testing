@@ -21,9 +21,8 @@ function App() {
     setCart([]);
   };
 
-  // ПОМИЛКА: використовується == замість ===
   const addToCart = (product: Product) => {
-    const existing = cart.find(item => item.product.id == product.id);
+    const existing = cart.find(item => item.product.id === product.id);
     if (existing) {
       setCart(cart.map(item =>
         item.product.id === product.id

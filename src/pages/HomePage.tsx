@@ -35,7 +35,6 @@ const HomePage: React.FC<Props> = ({ addToCart }) => {
     addToCart(product);
     setAddedIds(prev => [...prev, product.id]);
     setTimeout(() => {
-      // ПОМИЛКА: фільтр не враховує що той самий id міг бути доданий кілька разів
       setAddedIds(prev => prev.filter(id => id !== product.id));
     }, 1500);
   };
